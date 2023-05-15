@@ -6,6 +6,7 @@ All this will run in local using Docker containers.
 We will use [Confluent Kafka](https://developer.confluent.io/) and [Localstack](https://hub.docker.com/r/localstack/localstack) to mock S3 buckets.
 
 
+
 ### Prerequisites
 
 - Make sure you have [Docker](https://docs.docker.com/engine/install/) installed.

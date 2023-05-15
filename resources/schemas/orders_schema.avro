@@ -1,0 +1,115 @@
+{
+        "namespace": "ksql",
+        "name": "orders",
+        "type": "record",
+        "fields": [
+                {"name": "order_id", "type": {
+                    "type": "long",
+                    "arg.properties": {
+                        "range": {
+                            "min": 1487715775521,
+                            "max": 1519273364600
+                        }
+                    }
+                }},
+                {"name": "creation_time", "type": {
+                    "type": "string",
+                    "arg.properties": {
+                        "regex": "2023-05-13 ([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])"
+                    }
+                }},
+                {"name": "update_time", "type": {
+                    "type": "string",
+                    "arg.properties": {
+                        "regex": "2023-05-13 ([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])"
+                    }
+                }},
+                {"name": "urn", "type": {
+                    "type": "string",
+                    "arg.properties": {
+                        "regex": "glv:order:6cb9e61[0-9][0-9]-4740-4a99-b834-e91586c[0-9][0-9]d6c"
+                    }
+                }},
+                {"name": "activation_time", "type": {
+                    "type": "string",
+                    "arg.properties": {
+                        "regex": "2023-05-13 ([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])"
+                    }
+                }},
+                {"name": "city_code", "type": {
+                    "type": "string",
+                    "arg.properties": {
+                        "options": [
+                            "BCN",
+                            "MAD",
+                            "VAL"
+                        ]
+                    }
+                }},
+                {"name": "code", "type": {
+                    "type": "string",
+                    "arg.properties": {
+                    "regex": "([A-Z]|[0-9]){0,15}",
+                    "length":
+                        {
+                        "min": 9
+                        }
+                    }
+                }},
+                {"name": "deleted", "type": {
+                    "type": "string",
+                    "arg.properties": {
+                        "options": [
+                            "true",
+                            "false"
+                        ]
+                    }
+                }},
+                {"name": "courier_id", "type": {
+                    "type": "long",
+                    "arg.properties": {
+                        "range": {
+                            "min": 1487715775,
+                            "max": 1519273364
+                        }
+                    }
+                }},
+                {"name": "customer_id", "type": {
+                    "type": "long",
+                    "arg.properties": {
+                        "range": {
+                            "min": 1487715775,
+                            "max": 1519273364
+                        }
+                    }
+                }},
+                {"name": "store_id", "type": {
+                    "type": "long",
+                    "arg.properties": {
+                        "range": {
+                            "min": 1487715,
+                            "max": 1519273
+                        }
+                    }
+                }},
+                {"name": "store_address_id", "type": {
+                    "type": "long",
+                    "arg.properties": {
+                        "range": {
+                            "min": 1487715,
+                            "max": 1519273
+                        }
+                    }
+                }},
+                {"name": "current_status_type", "type": {
+                    "type": "string",
+                    "arg.properties": {
+                        "options": [
+                            "DeliveredStatus",
+                            "CanceledStatus"
+                        ]
+                    }
+                }}
+
+        ]
+}

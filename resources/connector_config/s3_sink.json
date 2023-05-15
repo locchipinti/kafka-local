@@ -1,0 +1,30 @@
+{
+  "name": "orders-s3-sink",
+  "config": {
+    "auto.offset.reset": "earliest",
+    "name": "orders-s3-sink",
+    "connector.class": "io.confluent.connect.s3.S3SinkConnector",
+    "topics": "orders",
+    "format.class": "io.confluent.connect.s3.format.avro.AvroFormat",
+    "flush.size": "10000",
+    "rotate.interval.ms": "900000",
+    "rotate.schedule.interval.ms": "900000",
+    "enhanced.avro.schema.support": "true",
+    "connect.meta.data": "true",
+    "avro.codec": "snappy",
+    "schema.compatibility": "FULL",
+    "s3.bucket.name": "kafka-raw-landing",
+    "s3.region": "eu-west-1",
+    "aws.access.key.id": "fake",
+    "aws.secret.access.key": "****",
+    "store.kafka.keys": "false",
+    "store.kafka.headers": "false",
+    "storage.class": "io.confluent.connect.s3.storage.S3Storage",
+    "topics.dir": "topics",
+    "store.url": "http://localstack:4566",
+    "partitioner.class": "io.confluent.connect.storage.partitioner.HourlyPartitioner",
+    "locale": "en-US",
+    "timezone": "UTC",
+    "timestamp.extractor": "Record"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "orders-data-gen",
+    "config": {
+      "name": "orders-data-gen",
+      "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
+      "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+      "kafka.topic": "orders",
+      "max.interval": "1000",
+      "schema.filename": "/resources/schemas/orders_schema.avro",
+      "schema.keyfield": "order_id"
+    }
+  }
